@@ -27,7 +27,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
     try {
-      let response = await fetch("http://localhost:3001/contact", {
+      let response = await fetch("https://peter-tillmann88.github.io/phtillmann/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
