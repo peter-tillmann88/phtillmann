@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/phtillmann/static/css/main.48560d56.css",
+    "main.css": "/phtillmann/static/css/main.83af718c.css",
     "main.js": "/phtillmann/static/js/main.9f1f52c5.js",
     "static/js/453.68693753.chunk.js": "/phtillmann/static/js/453.68693753.chunk.js",
     "static/media/banner-bg.png": "/phtillmann/static/media/banner-bg.af47d2a58c55fe53e6e5.png",
@@ -30,12 +30,12 @@
     "index.html": "/phtillmann/index.html",
     "static/media/nav-icon1.svg": "/phtillmann/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/phtillmann/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.48560d56.css.map": "/phtillmann/static/css/main.48560d56.css.map",
+    "main.83af718c.css.map": "/phtillmann/static/css/main.83af718c.css.map",
     "main.9f1f52c5.js.map": "/phtillmann/static/js/main.9f1f52c5.js.map",
     "453.68693753.chunk.js.map": "/phtillmann/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48560d56.css",
+    "static/css/main.83af718c.css",
     "static/js/main.9f1f52c5.js"
   ]
 }
