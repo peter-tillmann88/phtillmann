@@ -11,48 +11,78 @@ export const Contact = () => {
     email: '',
     phone: '',
     message: ''
-  }
+  };
+  
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState({ success: null, message: '' });
 
   const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
-  }
+    setFormDetails({
+      ...formDetails,
+      [category]: value
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+
+    setStatus({ success: null, message: '' });
+
+
+    if (!formDetails.firstName.trim()) {
+        setStatus({ success: false, message: 'Please enter your First Name.' });
+        return;
+    } 
+    if (!formDetails.lastName.trim()) {
+        setStatus({ success: false, message: 'Please enter your Last Name.' });
+        return;
+    } 
+    if (!formDetails.email.trim()) {
+        setStatus({ success: false, message: 'Please enter your Email.' });
+        return;
+    } 
+    if (!formDetails.phone.trim()) {
+        setStatus({ success: false, message: 'Please enter your Phone Number.' });
+        return;
+    } 
+    if (!formDetails.message.trim()) {
+        setStatus({ success: false, message: 'Please enter your Message.' });
+        return;
+    }
+    
+    
     setButtonText("Sending...");
     try {
-      let response = await fetch("https://phtillmann.onrender.com/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
-  
-      if (response.ok) {
-        let result = await response.json();
-        setFormDetails(formInitialDetails);
-        if (result.code === 200) {
-          setStatus({ success: true, message: 'Message sent successfully' });
+        const response = await fetch("https://phtillmann.onrender.com/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(formDetails),
+        });
+
+        if (response.ok) {
+            
+            const result = await response.json();
+            if (result.code === 200) {
+                setFormDetails(formInitialDetails); 
+                setStatus({ success: true, message: 'Message sent successfully.' });
+            } else {
+                setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+            }
         } else {
-          setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+            setStatus({ success: false, message: 'Something went wrong, please try again later.' });
         }
-      } else {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
     } catch (error) {
-      setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+        setStatus({ success: false, message: 'Something went wrong, please try again later.' });
     } finally {
-      setButtonText("Send");
+        setButtonText("Send");
     }
-  };
-  
+};
+
+
 
   return (
     <section className="contact" id="connect">
@@ -76,7 +106,7 @@ export const Contact = () => {
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                     </Col>
                     <Col size={12} sm={6} className="px-1">
                       <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
@@ -88,12 +118,11 @@ export const Contact = () => {
                       <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
-                    {
-                      status.message &&
+                    {status.message && (
                       <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
+                        <p className={status.success === false ? "text-danger" : "text-success"}>{status.message}</p>
                       </Col>
-                    }
+                    )}
                   </Row>
                 </form>
               </div>}
@@ -102,5 +131,5 @@ export const Contact = () => {
         </Row>
       </Container>
     </section>
-  )
+  );
 }
