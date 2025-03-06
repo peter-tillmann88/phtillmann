@@ -5,12 +5,14 @@ import portfolioimg from "../assets/img/Website Portfolio.png";
 import nutrifit from "../assets/img/project2.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import foodjournal from "../assets/img/androidapp.png";
+import PIASGames from "../assets/img/PIASGames.png"; 
+import Compiler from "../assets/img/Compiler.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
-  const projects = [
+  const projectsTab1 = [
     {
       title: "Portfolio Website",
       description: "This is the website you are currently located. Take a look around and see all the features I have implemented.",
@@ -29,6 +31,21 @@ export const Projects = () => {
       imgUrl: foodjournal,
       link: "https://github.com/peter-tillmann88/Food-Journal"
     },
+  ];
+
+  const projectsTab2 = [
+    {
+      title: "PIAS Games",
+      description: "This is an video game e-commerce web store allowing you to make an account and purchase items through cart.",
+      imgUrl: PIASGames,
+      link: "https://github.com/peter-tillmann88/PIASGames"
+    },
+    {
+      title: "B-minor Compiler",
+      description: "This project creates a compiler for a subset of C includes scanning, parsing, typechecking, and code generation.",
+      imgUrl: Compiler,
+      link: "https://github.com/peter-tillmann88/bminor_compiler"
+    }
   ];
 
   return (
@@ -57,7 +74,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => (
+                          projectsTab1.map((project, index) => (
                             <ProjectCard
                               key={index}
                               title={project.title}
@@ -70,7 +87,19 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Coming Soon.</p>
+                      <Row>
+                        {
+                          projectsTab2.map((project, index) => (
+                            <ProjectCard
+                              key={index}
+                              title={project.title}
+                              description={project.description}
+                              imgUrl={project.imgUrl}
+                              link={project.link}
+                            />
+                          ))
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>Coming Soon.</p>
