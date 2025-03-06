@@ -36,13 +36,13 @@ export const Projects = () => {
   const projectsTab2 = [
     {
       title: "PIAS Games",
-      description: "This is an video game e-commerce web store allowing you to make an account and purchase items through cart.",
+      description: "This is an video game e-commerce web store allowing you to make an account and purchase products.",
       imgUrl: PIASGames,
       link: "https://github.com/peter-tillmann88/PIASGames"
     },
     {
       title: "B-minor Compiler",
-      description: "This project creates a compiler for a subset of C includes scanning, parsing, typechecking, and code generation.",
+      description: "This is a compiler for a subset of C including functionality such as scanning, parsing, typechecking, and code generation.",
       imgUrl: Compiler,
       link: "https://github.com/peter-tillmann88/bminor_compiler"
     }
