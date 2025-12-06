@@ -8,6 +8,7 @@ import android from "../assets/img/android.svg";
 import python from "../assets/img/python.svg";
 import sql from "../assets/img/sql.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import react from "\Users\Peter\Documents\GitHub\phtillmann\src\assets\img\react-logo-programming-2-svgrepo-com.svg"
 
 export const Skills = () => {
   const responsive = {
@@ -65,6 +66,10 @@ export const Skills = () => {
                             <div className="item">
                                 <img src={c} alt="Image" />
                                 <h5>C</h5>
+                            </div>
+                            <div className="item">
+                                <img src={react} alt="Image" />
+                                <h5>React</h5>
                             </div>
                         </Carousel>
                     </div>

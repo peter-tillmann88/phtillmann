@@ -7,6 +7,7 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import foodjournal from "../assets/img/androidapp.png";
 import PIASGames from "../assets/img/PIASGames.png"; 
 import Compiler from "../assets/img/Compiler.png";
+import Gleason from "\Users\Peter\Documents\GitHub\phtillmann\src\assets\img\herro.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -36,7 +37,7 @@ export const Projects = () => {
   const projectsTab2 = [
     {
       title: "PIAS Games",
-      description: "This is an video game e-commerce web store allowing you to make an account and purchase products.",
+      description: "This is an video game e-commerce web store allowing you to make accounts and purchase products, or manage through managment functions.",
       imgUrl: PIASGames,
       link: "https://github.com/peter-tillmann88/PIASGames"
     },
@@ -45,6 +46,12 @@ export const Projects = () => {
       description: "This is a compiler for a subset of C including functionality such as scanning, parsing, typechecking, and code generation.",
       imgUrl: Compiler,
       link: "https://github.com/peter-tillmann88/bminor_compiler"
+    },
+    {
+      title: "Gleason Grading CNN",
+      description: "This is a Deep CNN for classifying Gleason grades(G3, G4, G5, and NC) on the SICAPv2 prostate histopathology dataset.",
+      imgUrl: Gleason,
+      link: "https://github.com/peter-tillmann88/gleason-grading-resnet"
     }
   ];
 

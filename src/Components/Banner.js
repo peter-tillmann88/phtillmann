@@ -44,9 +44,9 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
+            <span className="tagline">Welcome to my Portfolio Website</span>
             <h1>{`Hi I'm Peter H Tillmann `}<span className="wrap">{text}</span></h1>
-            <p>I am navigating the final year of my Computer Science degree. Curiosity and code are what drive me, and I'm on the lookout for an internship where I can bring my academic learning to life. Dive into my portfolio to see the milestones of my journey so far.</p>
+            <p>I am navigating the first year of my Master's of Science in Computer Science. Curiosity and code are what drive me, and I'm on the lookout for an internship where I can bring my academic learning to life. Dive into my portfolio to see some of the milestones of my journey so far.</p>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="Header Img" />
