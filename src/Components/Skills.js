@@ -8,7 +8,7 @@ import android from "../assets/img/android.svg";
 import python from "../assets/img/python.svg";
 import sql from "../assets/img/sql.svg";
 import colorSharp from "../assets/img/color-sharp.png"
-import react from "\Users\Peter\Documents\GitHub\phtillmann\src\assets\img\react-logo-programming-2-svgrepo-com.svg"
+import react from "../assets/img/react-logo-programming-2-svgrepo-com.svg";
 
 export const Skills = () => {
   const responsive = {

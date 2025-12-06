@@ -7,7 +7,7 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import foodjournal from "../assets/img/androidapp.png";
 import PIASGames from "../assets/img/PIASGames.png"; 
 import Compiler from "../assets/img/Compiler.png";
-import Gleason from "\Users\Peter\Documents\GitHub\phtillmann\src\assets\img\herro.png"
+import Gleason from "../assets/img/herro.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
