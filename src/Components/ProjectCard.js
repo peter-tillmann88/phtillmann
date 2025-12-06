@@ -5,8 +5,8 @@ export const ProjectCard = ({ title, description, imgUrl, link }) => {
   return (
     <Col size={12} sm={6} md={4}>
       <a href={link} target="_blank" rel="noopener noreferrer" className="proj-link">
-        <div 
-          className="proj-imgbx" 
+        <div
+          className="proj-imgbx"
           style={{
             width: "100%",
             borderRadius: "20px",
@@ -14,15 +14,16 @@ export const ProjectCard = ({ title, description, imgUrl, link }) => {
             position: "relative",
           }}
         >
-          <img 
-            src={imgUrl} 
+          <img
+            src={imgUrl}
             alt={title}
+            className="proj-img"
             style={{
-              width: "100%",
-              height: "220px",      
-              objectFit: "cover",  
-              borderRadius: "20px", 
-              display: "block"
+              width: "100% !important",
+              height: "220px !important",
+              objectFit: "cover !important",
+              borderRadius: "20px !important",
+              display: "block !important",
             }}
           />
 
@@ -33,5 +34,5 @@ export const ProjectCard = ({ title, description, imgUrl, link }) => {
         </div>
       </a>
     </Col>
-  )
+  );
 };
