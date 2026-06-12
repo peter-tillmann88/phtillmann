@@ -62,7 +62,7 @@ export const Contact = () => {
             },
             body: JSON.stringify(formDetails),
         });
-
+        console.log("RESPONSE STATUS:", response.status);
         if (response.ok) {
             
             const result = await response.json();

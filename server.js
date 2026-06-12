@@ -6,13 +6,7 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 
-app.use(cors({
-  origin: [ 
-    "http://localhost:3000",
-    "https://peter-tillmann88.github.io/phtillmann/"
-  ]
-
-}));
+app.use(cors());
 
 app.use(express.json());
 
