@@ -29,12 +29,12 @@ export const NavBar = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = resumePdf; // The path to your resume PDF
-    link.download = 'Peter_Tillmann_Resume.pdf'; // The default filename for the download
-    link.style.display = 'none'; // Make the link invisible
+    link.href = resumePdf; 
+    link.download = 'Peter_Tillmann_Resume.pdf'; 
+    link.style.display = 'none'; 
     document.body.appendChild(link);
-    link.click(); // Programmatically click the link to trigger the download
-    document.body.removeChild(link); // Remove the link from the document
+    link.click(); 
+    document.body.removeChild(link); 
   };
   
   return (
@@ -54,9 +54,13 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/peter-tillmann-145a16261/"><img src={navIcon1} alt="" /></a>
-              <a href="https://www.facebook.com/peterharrison.tillmann/"><img src={navIcon2} alt="" /></a>
-              <a href="https://www.instagram.com/peter_tillmann/"><img src={navIcon3} alt="" /></a>
+              <a href="https://www.linkedin.com/in/peter-tillmann-145a16261/" target="_blank" rel="noopener noreferrer" ><img src={navIcon1} alt="" /></a>
+              {/* <a href="https://github.com/peter-tillmann88"
+                 target="_blank" 
+                 rel="noopener noreferrer"
+              >
+                <img src={navIcon2} alt="" />
+              </a> */}
             </div>
             <button className="vvd" onClick={handleDownload}><span>Download Resume</span></button>
           </span>

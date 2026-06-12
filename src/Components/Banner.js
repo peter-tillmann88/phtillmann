@@ -6,7 +6,7 @@ import headerImg from "../assets/img/header-img.png";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Front-End Developer", "Back-End Developer", "Software Engineer"];
+  const toRotate = ["Full-Stack Developer", "Machine Learning Developer", "Software Engineer"];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -45,8 +45,8 @@ export const Banner = () => {
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcome to my Portfolio Website</span>
-            <h1>{`Hi I'm Peter H Tillmann `}<span className="wrap">{text}</span></h1>
-            <p>I am navigating the first year of my Master's of Science in Computer Science. Curiosity and code are what drive me, and I'm on the lookout for an internship where I can bring my academic learning to life. Dive into my portfolio to see some of the milestones of my journey so far.</p>
+            <h1>{`Hi, I'm Peter H Tillmann `}<span className="wrap">{text}</span></h1>
+            <p>Computer Science graduate focused on building software systems and data-driven applications. Currently seeking internship or new graduate opportunities in software engineering, data, or machine learning. Explore my portfolio to see a selection of projects I’ve built.</p>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="Header Img" />
