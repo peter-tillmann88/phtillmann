@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/phtillmann/static/css/main.4dce2289.css",
-    "main.js": "/phtillmann/static/js/main.00229b70.js",
-    "static/js/453.68693753.chunk.js": "/phtillmann/static/js/453.68693753.chunk.js",
+    "main.css": "/phtillmann/static/css/main.a17ecc79.css",
+    "main.js": "/phtillmann/static/js/main.d83172b0.js",
     "static/media/banner-bg.png": "/phtillmann/static/media/banner-bg.af47d2a58c55fe53e6e5.png",
     "static/media/header-img.png": "/phtillmann/static/media/header-img.14a53dfabd3f9acbc05c.png",
     "static/media/androidapp.png": "/phtillmann/static/media/androidapp.64608dc1056fa896b314.png",
@@ -31,16 +30,15 @@
     "static/media/java.svg": "/phtillmann/static/media/java.da09408c46361bf121d001dfb5c4ed28.svg",
     "static/media/nav-icon3.svg": "/phtillmann/static/media/nav-icon3.08b285abb8e118b52637efa5d65c5367.svg",
     "static/media/c.svg": "/phtillmann/static/media/c.0361b053510273ab9c51ecbef5a61db1.svg",
+    "static/media/nav-icon2.svg": "/phtillmann/static/media/nav-icon2.3545092bcc813ad804d11ab09c5f7646.svg",
     "static/media/sql.svg": "/phtillmann/static/media/sql.d976d250b5932c8ad2fbd0b8dd4f5856.svg",
     "index.html": "/phtillmann/index.html",
     "static/media/nav-icon1.svg": "/phtillmann/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
-    "static/media/nav-icon2.svg": "/phtillmann/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.4dce2289.css.map": "/phtillmann/static/css/main.4dce2289.css.map",
-    "main.00229b70.js.map": "/phtillmann/static/js/main.00229b70.js.map",
-    "453.68693753.chunk.js.map": "/phtillmann/static/js/453.68693753.chunk.js.map"
+    "main.a17ecc79.css.map": "/phtillmann/static/css/main.a17ecc79.css.map",
+    "main.d83172b0.js.map": "/phtillmann/static/js/main.d83172b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.4dce2289.css",
-    "static/js/main.00229b70.js"
+    "static/css/main.a17ecc79.css",
+    "static/js/main.d83172b0.js"
   ]
 }
