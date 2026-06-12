@@ -41,24 +41,28 @@ app.post("/contact", (req, res) => {
   const { firstName, lastName, email, phone, message } = req.body;
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: "phtillmann@gmail.com",
+    from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+    to: process.env.EMAIL_USER,
+    replyTo: email,
     subject: "Portfolio Contact Form Submission",
     html: `
-      <p>Name: ${firstName} ${lastName}</p>
-      <p>Email: ${email}</p>
-      <p>Phone: ${phone}</p>
-      <p>Message: ${message}</p>
+      <p><b>Name:</b> ${firstName} ${lastName}</p>
+      <p><b>Email:</b> ${email}</p>
+      <p><b>Phone:</b> ${phone}</p>
+      <p><b>Message:</b> ${message}</p>
     `
   };
 
   
   transporter.sendMail(mailOptions)
-    .then(() => {
+    .then((info) => {
       console.log("Email sent");
+      console.log("Accepted by SMTP:", info.response);
+      console.log("Message ID:", info.messageId);
     })
     .catch((err) => {
       console.log("Email error:", err.message);
+      console.log("SMTP ERROR:", err);
     });
 
   res.json({
