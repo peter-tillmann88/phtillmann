@@ -2,9 +2,11 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
 const app = express();
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(cors({
   origin: [
@@ -19,56 +21,37 @@ app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
-
-transporter.verify((error) => {
-  if (error) {
-    console.log("SMTP not ready");
-  } else {
-    console.log("SMTP ready");
-  }
-});
-
-app.post("/contact", (req, res) => {
+app.post("/contact", async (req, res) => {
   console.log("Contact request received");
 
   const { firstName, lastName, email, phone, message } = req.body;
 
-  const mailOptions = {
-    from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-    to: process.env.EMAIL_USER,
-    replyTo: email,
-    subject: "Portfolio Contact Form Submission",
-    html: `
-      <p><b>Name:</b> ${firstName} ${lastName}</p>
-      <p><b>Email:</b> ${email}</p>
-      <p><b>Phone:</b> ${phone}</p>
-      <p><b>Message:</b> ${message}</p>
-    `
-  };
-
-  
-  transporter.sendMail(mailOptions)
-    .then((info) => {
-      console.log("Email sent");
-      console.log("Accepted by SMTP:", info.response);
-      console.log("Message ID:", info.messageId);
-    })
-    .catch((err) => {
-      console.log("Email error:", err.message);
-      console.log("SMTP ERROR:", err);
+  try {
+    await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
+      to: "phtillmann@gmail.com",
+      subject: "Portfolio Contact Form",
+      html: `
+        <p><b>Name:</b> ${firstName} ${lastName}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Phone:</b> ${phone}</p>
+        <p><b>Message:</b> ${message}</p>
+      `
     });
 
-  res.json({
-    code: 200,
-    status: "Message received"
-  });
+    return res.json({
+      code: 200,
+      status: "Message sent"
+    });
+
+  } catch (err) {
+    console.log("Email error:", err);
+
+    return res.json({
+      code: 500,
+      status: "Email failed"
+    });
+  }
 });
 
 const PORT = process.env.PORT || 3001;
