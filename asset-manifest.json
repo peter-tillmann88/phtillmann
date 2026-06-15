@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/phtillmann/static/css/main.a17ecc79.css",
-    "main.js": "/phtillmann/static/js/main.5502bb90.js",
+    "main.js": "/phtillmann/static/js/main.b601fc19.js",
     "static/media/banner-bg.png": "/phtillmann/static/media/banner-bg.af47d2a58c55fe53e6e5.png",
     "static/media/header-img.png": "/phtillmann/static/media/header-img.14a53dfabd3f9acbc05c.png",
     "static/media/androidapp.png": "/phtillmann/static/media/androidapp.64608dc1056fa896b314.png",
@@ -35,10 +35,10 @@
     "index.html": "/phtillmann/index.html",
     "static/media/nav-icon1.svg": "/phtillmann/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "main.a17ecc79.css.map": "/phtillmann/static/css/main.a17ecc79.css.map",
-    "main.5502bb90.js.map": "/phtillmann/static/js/main.5502bb90.js.map"
+    "main.b601fc19.js.map": "/phtillmann/static/js/main.b601fc19.js.map"
   },
   "entrypoints": [
     "static/css/main.a17ecc79.css",
-    "static/js/main.5502bb90.js"
+    "static/js/main.b601fc19.js"
   ]
 }
